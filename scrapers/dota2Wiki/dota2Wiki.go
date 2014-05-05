@@ -19,6 +19,20 @@ func GetHeroes(heroes []string) {
 		agility, _ := parsers.ParseHeroAgility(sHero)
 		intelligence, _ := parsers.ParseHeroIntelligence(sHero)
 		primary, _ := parsers.ParseHeroPrimary(sHero)
+		movementspeed, _ := parsers.ParseHeroMovementSpeed(sHero)
+		turnrate, _ := parsers.ParseHeroTurnRate(sHero)
+		sightrange, _ := parsers.ParseHeroSightRange(sHero)
+		attackrange, _ := parsers.ParseHeroAttackRange(sHero)
+		missilespeed, _ := parsers.ParseHeroMissileSpeed(sHero)
+		attackduration, _ := parsers.ParseHeroAttackDuration(sHero)
+		castduration, _ := parsers.ParseHeroCastDuration(sHero)
+		baseattacktime, _ := parsers.ParseHeroBaseAttackTime(sHero)
+		hp, _ := parsers.ParseHeroHP(sHero)
+		mana, _ := parsers.ParseHeroMana(sHero)
+		damage, _ := parsers.ParseHeroDamage(sHero)
+		armor, _ := parsers.ParseHeroArmor(sHero)
+		attackspersecond, _ := parsers.ParseHeroAttacksPerSecond(sHero)
+		profilepicture, _ := parsers.ParseHeroProfilePicture(name, sHero)
 		hero := structs.Hero{
 			name,
 			faction,
@@ -26,6 +40,20 @@ func GetHeroes(heroes []string) {
 			agility,
 			intelligence,
 			primary,
+			hp,
+			mana,
+			damage,
+			armor,
+			attackspersecond,
+			movementspeed,
+			turnrate,
+			sightrange,
+			attackrange,
+			missilespeed,
+			attackduration,
+			castduration,
+			baseattacktime,
+			profilepicture,
 		}
 		log.Printf("\n%+v", hero)
 
